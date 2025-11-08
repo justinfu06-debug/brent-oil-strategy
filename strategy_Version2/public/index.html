@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" data-i18n="hero.desc"/>
+  <title data-i18n="hero.title">Brent原油智能策略分析平台</title>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+<body data-i18n-title="hero.title">
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <span class="logo gradient-text" data-i18n="hero.title"></span>
+      <div class="nav-links">
+        <a href="index.html" class="active" data-i18n="nav.home"></a>
+        <a href="analysis.html" data-i18n="nav.analysis"></a>
+        <a href="heatmap.html" data-i18n="nav.heatmap"></a>
+        <a href="kline.html" data-i18n="nav.kline"></a>
+        <a href="strategy.html" data-i18n="nav.strategy"></a>
+        <a href="backtest.html" data-i18n="nav.backtest"></a>
+        <a href="monitor.html" data-i18n="nav.monitor"></a>
+        <!-- 语言切换按钮 -->
+        <button onclick="switchLang('zh-CN')" class="ml-8">中文</button>
+        <button onclick="switchLang('en-US')" class="ml-2">EN</button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <header class="hero-block">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero.title"></h1>
+        <p class="hero-desc" data-i18n="hero.desc"></p>
+        <div class="hero-action">
+          <a class="btn primary" href="analysis.html" data-i18n="hero.action"></a>
+        </div>
+      </div>
+    </header>
+    <section class="quickview-cards">
+      <div class="card">
+        <span class="card-label" data-i18n="card.price"></span>
+        <span class="card-value" id="quick-price">$--.--</span>
+      </div>
+      <div class="card">
+        <span class="card-label" data-i18n="card.eia"></span>
+        <span class="card-value" data-i18n="card.eia.value"></span>
+      </div>
+      <div class="card">
+        <span class="card-label" data-i18n="card.expert"></span>
+        <span class="card-value" id="card-expert">--</span>
+      </div>
+      <div class="card">
+        <span class="card-label" data-i18n="card.feature"></span>
+        <span class="card-features" data-i18n="feature.val"></span>
+      </div>
+    </section>
+    <section class="main-section">
+      <h2 data-i18n="main.highlight"></h2>
+      <ul class="plat-features">
+        <li data-i18n="feature.1"></li>
+        <li data-i18n="feature.2"></li>
+        <li data-i18n="feature.3"></li>
+        <li data-i18n="feature.4"></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="container text-center">
+      <p class="copy" data-i18n="footer.copyright"></p>
+    </div>
+  </footer>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

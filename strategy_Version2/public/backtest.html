@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>回测系统 - Brent原油策略分析平台</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>.card{background:rgba(35,37,54,0.87);border-radius:14px;padding:22px 24px;margin-bottom:24px;}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <span class="logo gradient-text">Brent策略分析</span>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="analysis.html">深度分析</a>
+        <a href="heatmap.html">价区热力</a>
+        <a href="kline.html">K线交互</a>
+        <a href="strategy.html">策略实验室</a>
+        <a href="backtest.html" class="active">回测系统</a>
+        <a href="monitor.html">监控中心</a>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-20 pb-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-3xl font-bold mb-8 gradient-text">策略回测系统</h1>
+      <section class="card mb-6">
+        <div>
+          <label>选择回测区间：</label>
+          <select id="bt-period" class="bg-gray-800 text-white px-3 py-1 rounded ml-2 mr-6">
+            <option value="60">60天</option><option value="120">120天</option><option value="250">250天</option>
+          </select>
+          <label class="ml-4">策略类型：</label>
+          <select id="bt-model" class="bg-gray-800 text-white px-3 py-1 rounded ml-2">
+            <option value="trend">趋势策略</option><option value="mean">均值回归</option>
+          </select>
+        </div>
+      </section>
+      <section class="card">
+        <h2 class="font-bold gradient-text mb-4">累计收益曲线</h2>
+        <div id="backtest-chart" style="height:360px"></div>
+        <div id="backtest-summary" class="text-gray-300 mt-5"></div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container text-center">
+      <p class="copy">© 2025 Brent原油策略分析平台. 金融科技支持 · by Copilot</p>
+    </div>
+  </footer>
+  <script src="/assets/js/backtest.js"></script>
+</body>
+</html>

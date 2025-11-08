@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>监控中心 - Brent原油策略分析平台</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .card{background:rgba(35,37,54,0.87);border-radius:14px;padding:22px 24px;margin-bottom:24px;}
+    .news-item{border-bottom:1px solid #464c5b;padding:10px 0;margin-bottom:8px;}
+    .news-item:last-child{border-bottom:none;}
+    .status-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;}
+    .status-up{background:#1de992;}
+    .status-down{background:#fa4b4b;}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <span class="logo gradient-text">Brent策略分析</span>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="analysis.html">深度分析</a>
+        <a href="heatmap.html">价区热力</a>
+        <a href="kline.html">K线交互</a>
+        <a href="strategy.html">策略实验室</a>
+        <a href="backtest.html">回测系统</a>
+        <a href="monitor.html" class="active">监控中心</a>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-20 pb-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-3xl font-bold mb-8 gradient-text">实时监控中心</h1>
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="card">
+          <span class="card-label">多时间框架监控</span>
+          <span class="card-value" id="monitor-price">--</span>
+        </div>
+        <div class="card">
+          <span class="card-label">重要新闻</span>
+          <div class="text-base text-yellow-400" id="news-flash">--</div>
+        </div>
+        <div class="card">
+          <span class="card-label">经济日历</span>
+          <div class="text-base text-lime-300" id="econ-next">--</div>
+        </div>
+      </div>
+      <section class="card">
+        <h2 class="font-bold gradient-text mb-4">新闻流 & 市场事件</h2>
+        <ul id="news-list" class="text-gray-300"></ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container text-center">
+      <p class="copy">© 2025 Brent原油策略分析平台. 金融科技支持 · by Copilot</p>
+    </div>
+  </footer>
+  <script src="/assets/js/monitor.js"></script>
+</body>
+</html>
